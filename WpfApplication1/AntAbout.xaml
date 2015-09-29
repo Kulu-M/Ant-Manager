@@ -1,0 +1,22 @@
+﻿<Page x:Class="WpfApplication1.AntAbout"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1080"
+      
+	Title="AntAbout">
+
+    <Grid>
+        <RichTextBox HorizontalAlignment="Left" Height="299" Margin="23,23,0,0" VerticalAlignment="Top" Width="622">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Herzlich Willkommen und danke für das verwenden des Ant Manager "/>
+                    <Run Text="2015..."/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Page>
