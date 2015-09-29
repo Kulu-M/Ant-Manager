@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Xceed.Wpf.DataGrid;
 
-namespace WpfApplication1
+namespace Antspace
 {
     /// <summary>
     /// Interaction logic for KolonieNeu.xaml

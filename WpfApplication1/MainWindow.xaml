@@ -1,4 +1,4 @@
-﻿<NavigationWindow x:Class="WpfApplication1.MainWindow"
+﻿<NavigationWindow x:Class="Antspace.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Ant Manager" Height="500" Width="900" Source="AntWelcome.xaml">

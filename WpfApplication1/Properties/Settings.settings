@@ -3,12 +3,24 @@
   <Profiles />
   <Settings>
     <Setting Name="wDateSaverSetting" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">09/29/2015 19:29:00</Value>
     </Setting>
     <Setting Name="zDateSaverSetting" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="pDateSaverSetting" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ColonyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ColonyRace" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ColonySettleDate" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ColonyNote" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

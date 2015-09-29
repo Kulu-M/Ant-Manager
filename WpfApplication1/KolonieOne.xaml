@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfApplication1.KolonieOne"
+﻿<Page x:Class="Antspace.KolonieOne"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -42,21 +42,30 @@
                     <Label Content="Gründungsdatum"  Margin="5,10,10,5" Grid.Column="0" Grid.Row="3"></Label>
                     <Label Content="Anmerkung" Margin="37,10,194,5"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"></Label>
 
-                    <Label HorizontalAlignment="Left"  Margin="10,10,0,5" Grid.Column="1" Grid.Row="1" Width="200" Content="Formicarium 1"/>
-                    <Label HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="2" Width="200" Content="Lasius niger"/>
-                    <Label HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="4" Width="200" Content="Gelbliche Farbvariante (Südeuropa)"/>
-                    <Label HorizontalAlignment="Center" Margin="10,10,5,5"  Grid.Column="1" Grid.Row="3" Width="200" Content="März 2014"></Label>
-                    <Button Content="Stammdaten ändern" HorizontalAlignment="Left" Margin="37,86,0,-69" Grid.Row="6" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2"/>
-                    <Button Content="Kolonie löschen" HorizontalAlignment="Left" Margin="109,86,-21,-66" Grid.Row="6" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Label x:Name="ColonyName" HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="1" Width="200" Content="ColonyBla"></Label>
+                    <TextBox x:Name="ColonyNameChangeBox" TextWrapping="Wrap" Opacity="0" Margin="10,10,5,5" Grid.Column="1" Grid.Row="1" Width="200" Text="ColonyName.Content" />
+
+                    <Label x:Name="ColonyRace" HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="2" Width="200" Content="Lasius niger"/>
+                    <TextBox x:Name="ColonyRaceChangeBox" Opacity="0" HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="2" Width="200" Text="ColonyRace.Content"/>
+
+                    <Label x:Name="ColonyNote" HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="4" Width="200" Content="Gelbliche Farbvariante (Südeuropa)"/>
+                    <TextBox x:Name="ColonyNoteChangeBox" Opacity="0" HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="4" Width="200" Text="ColonyNote.Content"/>
+
+                    <Label x:Name="ColonySettleDate" HorizontalAlignment="Center" Margin="10,10,5,5"  Grid.Column="1" Grid.Row="3" Width="200" Content="März 2014"></Label>
+                    <TextBox x:Name="ColonySettleDateChangeBox" Opacity="0" HorizontalAlignment="Left"  Margin="10,10,5,5" Grid.Column="1" Grid.Row="3" Width="200" Text="ColonySettleDate.Content"/>
+
+                    <Button x:Name="ChangeData" Content="Stammdaten ändern" HorizontalAlignment="Left" Margin="37,86,0,-69" Grid.Row="6" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2" Click="ChangeColonyData"/>
+                    <Button x:Name="DeleteColony" Content="Kolonie löschen" HorizontalAlignment="Left" Margin="109,86,-21,-66" Grid.Row="6" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2" Grid.Column="1"/>
                     <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="472" Margin="86,-4,-82,-219" Grid.RowSpan="7" VerticalAlignment="Top" Width="1"/>
+                    <Button x:Name="SaveColonyChanges" Opacity="0" Content="Speichern" HorizontalAlignment="Left" Margin="37,86,0,-69" Grid.Row="5" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2" Click="SaveColonyChanges_Click"/>
+                    <Button x:Name="AbortColonyChanges" Opacity="0" Content="Abbrechen" HorizontalAlignment="Left" Margin="109,86,-21,-66" Grid.Row="5" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2" Grid.Column="1" Click="AbortColonyChanges_Click"/>
+
+
                     <Expander Grid.Column="2" Grid.RowSpan="5" Header="Datenblatt anzeigen" HorizontalAlignment="Left" Margin="126,11,-117,0" Grid.Row="1" VerticalAlignment="Top" ToolTip="Lateinischer Name">
                         <TextBlock Text="&#x0d;&#x0a;Lasius (Lasius s. str.) niger &#x0d;&#x0a;&#x0d;&#x0a;Schwarze Wegameise&#x0d;&#x0a;&#x0d;&#x0a;Europa, Asien, Nordafrika, Nordamerika&#x0d;&#x0a;&#x0d;&#x0a;Monogyn&#x0d;&#x0a;&#x0d;&#x0a;Keine Soldaten&#x0d;&#x0a;&#x0d;&#x0a;Winterruhe von Ende Oktober bis Ende März&#x0d;&#x0a;&#x0d;&#x0a;Erdnester, Totholz, Stein&#x0d;&#x0a;&#x0d;&#x0a;50%-60% Luftfeuchte im Nest"/>
 
 
                     </Expander>
-
-
-
 
 
                 </Grid>
@@ -116,8 +125,7 @@
                     <Button x:Name="sendtoPuppen" Grid.Column="2" Grid.Row="1"  Margin="10,10,5,5" Content="V" Height="23" VerticalAlignment="Center" Click="sendtoPuppen_Click" ></Button>
                     <Button x:Name="geschluepft" Grid.Column="2" Grid.Row="2" Margin="10,10,5,5"  Content="Geschlüpft" Height="23" VerticalAlignment="Center" Click="geschluepft_Click"></Button>
 
-                    <Button x:Name="save" Content="SAVE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="save_Click" Grid.Column="3" Margin="527.8,151.8,0,0" Grid.Row="5"/>
-                    <Button x:Name="load" Content="LOAD" Grid.Column="3" HorizontalAlignment="Left" Margin="394,151.8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="75" Click="load_Click"/>
+
 
                 </Grid>
             </TabItem>
@@ -135,18 +143,18 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Zucker" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" Width="57" Grid.Column="0" Grid.Row="1"/>
-                    <Label Content="Proteine" HorizontalAlignment="Left" Margin="10,10,5,5" VerticalAlignment="Top" Grid.Column="0" Grid.Row="2"/>
-                    <Label Content="Wasser" HorizontalAlignment="Left" Margin="16,0,0,6" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="0"/>
-                    <ProgressBar x:Name="progressbarwasser" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="26" Margin="10,10,5,5" Width="100" Value="50" ValueChanged="progressbarwasser_ValueChanged" Grid.Column="1" Grid.Row="0"/>
-                    <ProgressBar x:Name="progressbarzucker" HorizontalAlignment="Left" Height="26" Margin="10,10,5,5" VerticalAlignment="Top" Width="100" Value="5" ValueChanged="progressbarzucker_ValueChanged" Grid.Column="1" Grid.Row="1"/>
-                    <ProgressBar x:Name="progressbarfleisch" HorizontalAlignment="Left" Height="26" Margin="10,10,5,5" VerticalAlignment="Top" Width="100" Value="90" Foreground="#FF01D328" ValueChanged="progressbarfleisch_ValueChanged" Grid.Column="1" Grid.Row="2"/>
-                    <Button x:Name="wasserauf2" Content="Aufgefüllt" HorizontalAlignment="Left"  Margin="10,10,0,6" Width="75" Click="wasserauf" Grid.Column="2" Grid.Row="0"/>
-                    <Button x:Name="zuckerauf2" Content="Aufgefüllt" HorizontalAlignment="Left"  Margin="10,10,5,5" VerticalAlignment="Top" Width="75" Height="26" Click="zuckerauf" Grid.Column="2" Grid.Row="1"/>
-                    <Button x:Name="fleischauf2" Content="Aufgefüllt" HorizontalAlignment="Left"  Margin="10,10,5,5"  VerticalAlignment="Top" Width="75" Height="26" Click="fleischauf" Grid.Column="2" Grid.Row="2"/>
-                    <Label x:Name="wasserdatum" Content="??" Grid.Column="4" HorizontalAlignment="Left" Margin="10.2,10,-7.4,0" VerticalAlignment="Top"/>
-                    <Label x:Name="zuckerdatum" Content="??" Grid.Column="4" HorizontalAlignment="Left" Margin="10.2,9.4,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-                    <Label x:Name="proteindatum" Content="??" Grid.Column="4" HorizontalAlignment="Left" Margin="9.2,9.8,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Label Content="Zucker" HorizontalAlignment="Left" Margin="17,27,0,0" VerticalAlignment="Top" Width="57" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
+                    <Label Content="Proteine" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Grid.Column="0" Grid.Row="2"/>
+                    <Label Content="Wasser" HorizontalAlignment="Left" Margin="17,0,0,22" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"/>
+                    <ProgressBar x:Name="wBar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="26" Margin="10,0,0,21" Width="126" Value="50" ValueChanged="progressbarwasser_ValueChanged" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
+                    <ProgressBar x:Name="zBar" HorizontalAlignment="Left" Height="26" Margin="10,27,0,0" VerticalAlignment="Top" Width="126" Value="5" ValueChanged="progressbarzucker_ValueChanged" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+                    <ProgressBar x:Name="pBar" HorizontalAlignment="Left" Height="26" Margin="8,62,0,0" VerticalAlignment="Top" Width="126" Value="90" Foreground="#FF01D328" ValueChanged="progressbarfleisch_ValueChanged" Grid.Column="1" Grid.Row="2"/>
+                    <Button x:Name="wasserauf2" Content="Aufgefüllt" HorizontalAlignment="Left"  Margin="9,9,0,19" Width="75" Click="wasserauf" Grid.Column="3" Height="26" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                    <Button x:Name="zuckerauf2" Content="Aufgefüllt" HorizontalAlignment="Left"  Margin="10,27,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="zuckerauf" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                    <Button x:Name="fleischauf2" Content="Aufgefüllt" HorizontalAlignment="Left"  Margin="10,62,0,0"  VerticalAlignment="Top" Width="75" Height="26" Click="fleischauf" Grid.Column="4" Grid.Row="2"/>
+                    <Label x:Name="wDaysGoneField" Content="??" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Top" Margin="112,8,-196,0" Width="244"/>
+                    <Label x:Name="zDaysGoneField" Content="??" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="112,16,-197,0" Width="244"/>
+                    <Label x:Name="pDaysGoneField" Content="??" Grid.Column="4" Grid.Row="2" VerticalAlignment="Top" Margin="112,62,-193,0"/>
                     <TextBox Grid.Column="4" HorizontalAlignment="Left" Height="185" Margin="225,108,-474,-181" Grid.Row="2" TextWrapping="Wrap" Text="12.08.2014 - Einige Minorarbeiter weisen ungewöhnliches Verhalten auf." VerticalAlignment="Top" Width="340"/>
                     <Label Content="Notizen" HorizontalAlignment="Left" Margin="169,106,-131,-21" Grid.Row="2" VerticalAlignment="Top" Grid.Column="4"/>
                     <Label Content="Label" HorizontalAlignment="Left" Margin="16,106,0,-25" Grid.Row="2" VerticalAlignment="Top"/>
