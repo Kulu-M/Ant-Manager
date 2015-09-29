@@ -37,6 +37,12 @@ namespace WpfApplication1
         String arbeiterstr = "";
 
 
+        DateTime wSavedDate;
+        DateTime zSavedDate;
+        DateTime pSavedDate;
+
+
+
         //ZEIT
 
         //Request System Date
@@ -46,15 +52,29 @@ namespace WpfApplication1
         DateTime oneday = DateTime.Today.AddDays(-1);
         DateTime twodays = DateTime.Today.AddDays(-2);
         DateTime threedays = DateTime.Today.AddDays(-3);
+
         
+
 
 
         public KolonieOne()
         {
-            InitializeComponent();            
+            InitializeComponent();
+
+
+            LoadSettingsMethod();         
         }
 
-        
+
+        public void LoadSettingsMethod()
+        {
+            //Daten laden
+            wSavedDate = Properties.Settings.Default.wDateSaverSetting;
+            zSavedDate = Properties.Settings.Default.zDateSaverSetting;
+            pSavedDate = Properties.Settings.Default.pDateSaverSetting;
+        }
+
+
 
 
         private void dateispeichern(object sender, RoutedEventArgs e)
@@ -66,7 +86,7 @@ namespace WpfApplication1
         {
 
             
-         }
+        }
 
         private void wasserauf(object sender, RoutedEventArgs e)
         {
@@ -90,6 +110,9 @@ namespace WpfApplication1
             //Pressing the button will raise the bar to 100% and insert todays date to the txt Field next to in
             progressbarzucker.Value = 100;
             zuckerdatum.Content = thisDay.ToString("D");
+
+            Properties.Settings.Default.zDateSaverSetting = thisDay;
+            Properties.Settings.Default.Save();
         }
 
         private void progressbarfleisch_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
