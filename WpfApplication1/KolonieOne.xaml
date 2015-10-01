@@ -61,11 +61,11 @@
                     <Button x:Name="AbortColonyChanges" Opacity="0" Content="Abbrechen" HorizontalAlignment="Left" Margin="109,86,-21,-66" Grid.Row="5" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2" Grid.Column="1" Click="AbortColonyChanges_Click"/>
 
 
-                    <Expander Grid.Column="2" Grid.RowSpan="5" Header="Datenblatt anzeigen" HorizontalAlignment="Left" Margin="126,11,-117,0" Grid.Row="1" VerticalAlignment="Top" ToolTip="Lateinischer Name">
-                        <TextBlock Text="&#x0d;&#x0a;Lasius (Lasius s. str.) niger &#x0d;&#x0a;&#x0d;&#x0a;Schwarze Wegameise&#x0d;&#x0a;&#x0d;&#x0a;Europa, Asien, Nordafrika, Nordamerika&#x0d;&#x0a;&#x0d;&#x0a;Monogyn&#x0d;&#x0a;&#x0d;&#x0a;Keine Soldaten&#x0d;&#x0a;&#x0d;&#x0a;Winterruhe von Ende Oktober bis Ende März&#x0d;&#x0a;&#x0d;&#x0a;Erdnester, Totholz, Stein&#x0d;&#x0a;&#x0d;&#x0a;50%-60% Luftfeuchte im Nest"/>
 
 
-                    </Expander>
+                    <TextBlock Grid.Column="2" Grid.RowSpan="6" Grid.Row="1" VerticalAlignment="Top" Text="&#x0d;&#x0a;Lasius (Lasius s. str.) niger &#x0d;&#x0a;&#x0d;&#x0a;Schwarze Wegameise&#x0d;&#x0a;&#x0d;&#x0a;Europa, Asien, Nordafrika, Nordamerika&#x0d;&#x0a;&#x0d;&#x0a;Monogyn&#x0d;&#x0a;&#x0d;&#x0a;Keine Soldaten&#x0d;&#x0a;&#x0d;&#x0a;Winterruhe von Ende Oktober bis Ende März&#x0d;&#x0a;&#x0d;&#x0a;Erdnester, Totholz, Stein&#x0d;&#x0a;&#x0d;&#x0a;50%-60% Luftfeuchte im Nest" Margin="193.6,0.2,-193.8,0"/>
+
+
 
 
                 </Grid>
@@ -88,36 +88,36 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Gynen:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
-                    <Label Content="Arbeiter:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
-                    <Label Content="Soldaten:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsEnabled="False" Grid.RowSpan="2"/>
-                    <TextBox x:Name="TextBoxGynen" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" TextWrapping="Wrap" Text="1" Width="51" HorizontalContentAlignment="Right" TextChanged="TextBoxGynen_TextChanged" Grid.Column="1" Grid.Row="0" IsReadOnly="True"/>
-                    <TextBox x:Name="TextBoxArbeiter" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" TextWrapping="Wrap" Text="200" Width="51" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="1" IsReadOnly="True"/>
-                    <TextBox x:Name="textboxsoldaten2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" Width="51" HorizontalContentAlignment="Right" TextChanged="textboxsoldaten_TextChanged" IsEnabled="False" Grid.Column="1" Grid.Row="2"/>
-                   
-                    
-                    <Label Content="Eier:"  Margin="10,10,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="0"/>
-                    <Label Content="Larven:"  Margin="10,10,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="1"/>
-                    <Label Content="Puppen:"  Margin="10,10,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="2"/>
-                    <TextBox x:Name="eiertxt" HorizontalAlignment="Center"  Margin="10,10,5,5" Height="23" TextWrapping="Wrap" Text="25" VerticalAlignment="Center" Width="35" HorizontalContentAlignment="Right" Grid.Column="5" Grid.Row="0" TextChanged="TextBox_TextChanged_1"/>
-                    <TextBox x:Name="larventxt" HorizontalAlignment="Right"  Margin="0,11,6,6" Height="24" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="34" HorizontalContentAlignment="Right" Grid.Column="5" Grid.Row="1"/>
-                    <TextBox x:Name="puppentxt" HorizontalAlignment="Center"  Margin="10,10,5,5" Height="23" TextWrapping="Wrap" Text="17" VerticalAlignment="Center" Width="35" HorizontalContentAlignment="Right" Grid.Column="5" Grid.Row="2"/>
-                    <Button x:Name="sendtolarven" Grid.Column="6" Grid.Row="0" Margin="10,10,5,5"  Content="V" Height="23" VerticalAlignment="Center" Click="Button_Click"></Button>
-                    <Button x:Name="sendtoPuppen" Grid.Column="6" Grid.Row="1"  Margin="10,10,5,5" Content="V" Height="23" VerticalAlignment="Center" Click="sendtoPuppen_Click" ></Button>
-                    <Button x:Name="geschluepft" Grid.Column="6" Grid.Row="2" Margin="10,10,5,5"  Content="Geschlüpft" Height="23" VerticalAlignment="Center" Click="geschluepft_Click"></Button>
+                    <Label Content="Gynen:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="0" Height="25"/>
+                    <Label Content="Arbeiter:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="1" Height="25"/>
+                    <Label Content="Soldaten:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="2" IsEnabled="False" Grid.RowSpan="2" Height="25"/>
+                    <TextBox x:Name="TextBoxGynen" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" TextWrapping="Wrap" Text="1" Width="51" HorizontalContentAlignment="Right" TextChanged="TextBoxGynen_TextChanged" Grid.Column="5" Grid.Row="0" IsReadOnly="True" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="TextBoxArbeiter" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" TextWrapping="Wrap" Text="200" Width="51" HorizontalContentAlignment="Right" Grid.Column="5" Grid.Row="1" IsReadOnly="True" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="textboxsoldaten2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" TextWrapping="Wrap" Text="" Width="51" HorizontalContentAlignment="Right" TextChanged="textboxsoldaten_TextChanged" IsEnabled="False" Grid.Column="5" Grid.Row="2" VerticalContentAlignment="Center" />
 
-                    
-                    
+
+                    <Label Content="Eier:"  Margin="10,10,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Height="25"/>
+                    <Label Content="Larven:"  Margin="10,10,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Height="25"/>
+                    <Label Content="Puppen:"  Margin="10,10,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Height="25"/>
+                    <TextBox x:Name="eiertxt" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="25" VerticalAlignment="Center" Width="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="0" TextChanged="TextBox_TextChanged_1" Height="25"/>
+                    <TextBox x:Name="larventxt" HorizontalAlignment="Right" Height="25" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="34" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="puppentxt" HorizontalAlignment="Center"  Height="25" TextWrapping="Wrap" Text="17" VerticalAlignment="Center" Width="35" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" />
+                    <Button x:Name="sendtolarven" Grid.Column="2" Grid.Row="0" Content="V" Height="25" VerticalAlignment="Center" Click="Button_Click"></Button>
+                    <Button x:Name="sendtoPuppen" Grid.Column="2" Grid.Row="1"  Content="V" Height="25" VerticalAlignment="Center" Click="sendtoPuppen_Click" ></Button>
+                    <Button x:Name="geschluepft" Grid.Column="2" Grid.Row="2" Content="Geschlüpft" Height="25" VerticalAlignment="Center" Click="geschluepft_Click"></Button>
+
+
+
 
 
 
                 </Grid>
             </TabItem>
-            
-           
-                    
 
-               
+
+
+
+
             <TabItem Header="Versorgung">
                 <Grid Width="900" Margin="0,0,380,0">
                     <Grid.ColumnDefinitions>

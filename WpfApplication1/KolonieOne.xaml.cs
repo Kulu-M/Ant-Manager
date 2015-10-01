@@ -36,6 +36,7 @@ namespace Antspace
         String puppenstr = "";
         String arbeiterstr = "";
 
+
         int wDaysPassed;
         int zDaysPassed;
         int pDaysPassed;
@@ -74,9 +75,6 @@ namespace Antspace
             InitializeComponent();
 
             LoadSettingsMethod();
-         
-
-
         }
 
 
@@ -89,8 +87,8 @@ namespace Antspace
             LoadColonyData();
 
             LoadFoodData();  
-
         }
+
 
         public void LoadColonyData()
         {
@@ -113,6 +111,7 @@ namespace Antspace
             ColonyNote.Content = ColonyNoteString;
 
         }
+
 
         public void LoadFoodData()
         {
@@ -139,7 +138,6 @@ namespace Antspace
 
         private void dateioeffnen(object sender, RoutedEventArgs e)
         {
-
             
         }
 
