@@ -10,8 +10,8 @@
 
     ##### Colony View
     - Starting Screen remove Datenblatt "Expander"
-    - Colony Numbers
-    - Colony Development
+    - "Aktive Tiere" only implemented rudimentarily
+    - "Tiere in Produktion" only implemented rudimentarily
     - Colony Food & Water Supply
 
 ##### New Colony Creation Menu
