@@ -26,7 +26,7 @@
         </Grid.RowDefinitions>
 
 
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="221,160,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="ListBox_SelectionChanged">
+        <ListBox x:Name="ArtBox" HorizontalAlignment="Left" Height="100" Margin="221,160,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="ListBox_SelectionChanged">
 
             <ListBoxItem Content="Camponotus ligniperdus"/>
             <ListBoxItem Content="Camponotus vagus"/>
@@ -48,14 +48,14 @@
         <Label Content="Gynen" Margin="601,113,196,560"/>
         <Label Content="Arbeiter" Margin="593,158,239,503.8"/>
         <Label Content="Soldaten" Margin="591,208,239,461.8"/>
-        <Button Content="Speichern" HorizontalAlignment="Right" Margin="0,334,163,0" VerticalAlignment="Top" Width="75" Height="25"/>
-        <TextBox HorizontalAlignment="Left" TextAlignment="Right" Margin="686,118,0,0" Width="50" Height="20" Text="1" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="686,163,0,0" Width="50" Height="20" Text="ca. 700" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="686,213,0,0" Width="50" Height="20" Text="ca. 100" VerticalAlignment="Top"/>
+        <Button Content="Speichern" HorizontalAlignment="Right" Margin="0,334,163,0" VerticalAlignment="Top" Width="75" Height="25" Click="Button_ClickSave"/>
+        <TextBox x:Name="GyneBox" HorizontalAlignment="Left" TextAlignment="Right" Margin="686,118,0,0" Width="50" Height="20" Text="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="WorkerBox" HorizontalAlignment="Left" Margin="686,163,0,0" Width="50" Height="20" Text="ca. 700" VerticalAlignment="Top"/>
+        <TextBox x:Name="SoldierBox" HorizontalAlignment="Left" Margin="686,213,0,0" Width="50" Height="20" Text="ca. 100" VerticalAlignment="Top"/>
         <Button Content="Abbrechen" HorizontalAlignment="Left" Margin="478,334,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
         <Label Content="Anmerkung" HorizontalAlignment="Right" Margin="0,335,705,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox Text="Nest immer abdunkeln" Margin="221,341,479,339.8" Width="200" Height="20" TextChanged="TextBox_TextChanged"/>
-        <ComboBox HorizontalAlignment="Left" Margin="224,282,0,0" HorizontalContentAlignment="Right" VerticalAlignment="Top" Width="88">
+        <TextBox x:Name="NoteBox" Text="Nest immer abdunkeln" Margin="221,341,479,339.8" Width="200" Height="20" TextChanged="TextBox_TextChanged"/>
+        <ComboBox x:Name="DateBoxMonth" HorizontalAlignment="Left" Margin="224,282,0,0" HorizontalContentAlignment="Right" VerticalAlignment="Top" Width="88">
             <ComboBoxItem Content="Januar" IsSelected="True"/>
             <ComboBoxItem Content="Februar"/>
             <ComboBoxItem Content="März"/>
@@ -69,7 +69,7 @@
             <ComboBoxItem Content="November"/>
             <ComboBoxItem Content="Dezember"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="318,282,0,0" HorizontalContentAlignment="Right" VerticalAlignment="Top" Width="103">
+        <ComboBox x:Name="DateBoxYear" HorizontalAlignment="Left" Margin="318,282,0,0" HorizontalContentAlignment="Right" VerticalAlignment="Top" Width="103">
             <ComboBoxItem Content="2015" IsSelected="True"/>
             <ComboBoxItem Content="2014"/>
             <ComboBoxItem Content="2013"/>
@@ -79,7 +79,7 @@
             <ComboBoxItem Content="2009"/>
             <ComboBoxItem Content="2008"/>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="221,118,0,0" TextWrapping="Wrap" Text="Kolonie im Wohnzimmer" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="20" Margin="221,118,0,0" TextWrapping="Wrap" Text="Kolonie im Wohnzimmer" VerticalAlignment="Top" Width="200"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="153,113,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
