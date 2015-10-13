@@ -53,7 +53,7 @@ namespace Antspace
         {
 
             //WIP
-            string CartBox = ArtBox.Get//...
+            string CartBox = ArtBox.SelectedItems.ToString();//...
             string Comboselectedmonth = DateBoxMonth.SelectedItem.ToString();
             string Comboselectedyear = DateBoxYear.SelectedItem.ToString();
             string Agynentxt = GyneBox.Text.ToString();
