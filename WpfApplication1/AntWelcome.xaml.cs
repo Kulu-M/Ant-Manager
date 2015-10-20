@@ -36,15 +36,12 @@ namespace Antspace
         {
             AntAbout AntAbout = new AntAbout();
             this.NavigationService.Navigate(AntAbout);
-
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             KolonieNeu KolonieNeu = new KolonieNeu();
             this.NavigationService.Navigate(KolonieNeu);
-            
-       
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

@@ -24,18 +24,12 @@ namespace Antspace
         public KolonieNeu()
         {
             InitializeComponent();
-
-            
-
-
         }
 
         public class Colony {
 
             public string Cname, Cnote;
             public object Cart, Cgdatummonth, Cgdatumyear, Agynen, Aworker, Asoldiers;
-            
-
         }
 
 
@@ -53,7 +47,7 @@ namespace Antspace
         {
 
             //WIP
-            string CartBox = ArtBox.SelectedItems.ToString();//...
+            string CartBox = ArtBox.SelectedItems.ToString();
             string Comboselectedmonth = DateBoxMonth.SelectedItem.ToString();
             string Comboselectedyear = DateBoxYear.SelectedItem.ToString();
             string Agynentxt = GyneBox.Text.ToString();
