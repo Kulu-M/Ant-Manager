@@ -1,5 +1,16 @@
 # Ant-Manager
 
+
+![alt text](https://github.com/Kulu-M/Ant-Manager/blob/master/Screens/Capture1.PNG "Logo Title Text 1")
+
+---
+
+![alt text](https://github.com/Kulu-M/Ant-Manager/blob/master/Screens/Capture2.PNG "Logo Title Text 1")
+
+---
+
+
+
 ### To-Do:
 
 ##### Starting Screen / Main Menu
